@@ -1,0 +1,295 @@
+/* ---------- GERAL ---------- */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: black;
+}
+
+html {
+    scroll-behavior: smooth; /* rolagem suave ao clicar nos links */
+}
+
+h2 {
+    text-align: center;
+    margin: 0;
+}
+
+p {
+    line-height: 1.5;
+}
+
+/* ---------- CABEÇALHO E MENU ---------- */
+#cabecalho {
+    display: flex;                      /* logo e menu na mesma linha */
+    justify-content: space-between;     /* logo à esquerda, menu à direita */
+    align-items: center;
+    background: midnightblue;
+    padding: 12px 20px;
+}
+
+#logo {
+    margin: 0;
+    color: white;
+    font-family: "Times New Roman", serif;
+    font-size: 28px;
+    font-weight: normal;
+}
+
+#navegacao {
+    width: 65%;
+}
+
+#menu {
+    display: flex;
+    justify-content: space-around;      /* espalha os links como no modelo */
+    list-style: none;                   /* tira os pontos da lista */
+    margin: 0;
+    padding: 0;
+}
+
+#menu li a {
+    text-decoration: none;              /* tira o sublinhado */
+    color: white;
+    font-size: 16px;
+    margin: 0;
+}
+
+#menu li a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- BANNER (imagem de fundo) ---------- */
+#banner {
+    background-image: url('imagens/camera.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 70px 40px;
+}
+
+#banner h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+#banner p {
+    width: 90%;
+    margin: 0 auto 25px auto;           /* centraliza o parágrafo */
+}
+
+/* ---------- BOTÕES ---------- */
+.botao {
+    display: inline-block;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-size: 15px;
+    border: 1px solid white;
+    border-radius: 3px;
+}
+
+.botao-azul {
+    background: midnightblue;
+    color: white;
+}
+
+.botao-cinza {
+    background: #f0f0f0;
+    color: black;
+    border: 1px solid gray;
+}
+
+.botao:hover {
+    cursor: pointer;
+    opacity: 0.85;
+}
+
+/* ---------- SOBRE ---------- */
+#sobre {
+    background: midnightblue;
+    color: white;
+    text-align: center;
+    padding: 50px 40px;
+}
+
+#sobre h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+#sobre p {
+    width: 90%;
+    margin: 0 auto 25px auto;
+}
+
+/* ---------- SERVIÇOS ---------- */
+#servicos {
+    padding: 50px 40px;
+}
+
+#servicos h2 {
+    font-size: 26px;
+    margin-bottom: 50px;
+}
+
+#lista-servicos {
+    display: flex;
+    justify-content: space-around;
+}
+
+.servico {
+    width: 22%;
+    text-align: center;
+}
+
+.servico img {
+    display: block;
+    margin: 0 auto 15px auto;
+}
+
+.servico h3 {
+    margin: 0 0 15px 0;
+    font-size: 18px;
+}
+
+.servico p {
+    margin: 0;
+    font-size: 15px;
+}
+
+/* ---------- FOTOS (galeria) ---------- */
+#fotos {
+    padding: 30px 0 0 0;               /* galeria encosta nas bordas */
+}
+
+#fotos h2 {
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+#galeria {
+    display: flex;                      /* duas colunas lado a lado */
+}
+
+.coluna {
+    width: 50%;
+}
+
+.coluna img {
+    display: block;
+    width: 100%;
+    height: 260px;
+    object-fit: cover;                  /* corta a foto sem deformar */
+}
+
+/* ---------- RODAPÉ ---------- */
+#rodape-conteudo {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 40px 40px;
+}
+
+#contatos ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#contatos li {
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+#contatos li img {
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+    margin-right: 6px;
+}
+
+#contatos a {
+    color: midnightblue;
+}
+
+#companhia {
+    width: 40%;
+    text-align: center;
+}
+
+#companhia h3 {
+    margin: 0 0 15px 0;
+    font-size: 20px;
+}
+
+#companhia p {
+    margin: 0 0 20px 0;
+    font-size: 15px;
+}
+
+#redes img {
+    width: 32px;
+    height: 32px;
+    margin: 0 6px;
+}
+
+/* o ícone do Facebook é branco; no fundo branco ele sumiria, então invertemos para preto */
+#redes img.fundo-claro {
+    filter: invert(1);
+}
+
+#creditos {
+    background: midnightblue;
+    color: white;
+    text-align: center;
+    padding: 12px 0;
+}
+
+#creditos p {
+    margin: 0 0 6px 0;
+}
+
+#creditos a {
+    color: white;
+}
+
+/* ---------- TELAS PEQUENAS (celular) ---------- */
+@media (max-width: 800px) {
+    #cabecalho {
+        flex-direction: column;
+    }
+
+    #navegacao {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    #lista-servicos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .servico {
+        width: 90%;
+        margin-bottom: 30px;
+    }
+
+    #galeria {
+        flex-direction: column;
+    }
+
+    .coluna {
+        width: 100%;
+    }
+
+    #rodape-conteudo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #companhia {
+        width: 90%;
+        margin-top: 30px;
+    }
+}
